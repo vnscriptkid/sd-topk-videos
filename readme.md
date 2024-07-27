@@ -16,3 +16,8 @@ function getTopK(k: Number, period: Period): Video[] {}
 - Window types:
   - Tumbling: 05:00 - 06:00 (1 hour window)
   - Sliding: 05:01 - 06:01 (1 hour window)
+
+## TODOs
+- Heap
+- Count min sketch (vs bloom filter)
+- Similar: watchtime service, youtube views count

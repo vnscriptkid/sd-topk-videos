@@ -1,0 +1,4 @@
+### View
+curl -X POST http://localhost:8080/add-view \
+    -H "Content-Type: application/json" \
+    -d '{"user_id": "user1", "video_id": "video4", "owner_id": "user2"}'
