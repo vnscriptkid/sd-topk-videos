@@ -21,3 +21,7 @@ function getTopK(k: Number, period: Period): Video[] {}
 - Heap
 - Count min sketch (vs bloom filter)
 - Similar: watchtime service, youtube views count
+
+## Ref
+- https://youtu.be/1lfktgZ9Eeo?si=A-nCRmIAGfhLRSxK
+- https://youtu.be/nQpkRONzEQI?si=eXrZRQmN1M43hD3Q
