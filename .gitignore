@@ -1,2 +1,3 @@
 docker/minio
 docker/notebooks/jars
+node_modules
