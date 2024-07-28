@@ -37,8 +37,8 @@ func main() {
 	r.HandleFunc("/add-view", addViewHandler).Methods("POST")
 
 	http.Handle("/", r)
-	log.Println("Server started on :8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Println("Server started on :8081")
+	log.Fatal(http.ListenAndServe(":8081", nil))
 }
 
 func addViewHandler(w http.ResponseWriter, r *http.Request) {
@@ -58,7 +58,7 @@ func addViewHandler(w http.ResponseWriter, r *http.Request) {
 
 	kafkaMsg := kafka.Message{
 		TopicPartition: kafka.TopicPartition{Topic: &topic, Partition: kafka.PartitionAny},
-		Key:            []byte(event.UserID),
+		Key:            []byte(event.VideoID),
 		Value:          msg,
 	}
 

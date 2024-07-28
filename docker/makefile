@@ -1,5 +1,5 @@
 up:
-	docker compose up -d zoo1 kafka1 kafka2 kafka3 manager pg
+	docker compose up -d
 
 down:
 	docker compose down --remove-orphans --volumes
@@ -13,7 +13,7 @@ up_broker:
 	docker start kafka1
 
 # create a topic video-views
-topic_create_1:
+topic_create:
 	docker exec -it kafka1 kafka-topics \
 		--create \
 		--topic video-views \
@@ -21,9 +21,6 @@ topic_create_1:
 		--replication-factor 3 \
 		--if-not-exists \
 		--bootstrap-server kafka1:19092
-
-# create a topic filtered-views
-topic_create_2:
 	docker exec -it kafka1 kafka-topics \
 		--create \
 		--topic filtered-views \
@@ -148,10 +145,10 @@ consumer_groups_list:
 kafka1:
 	docker exec -it kafka1 bash
 
-# open at localhost:9000 on browser
+# open at localhost:9002 on browser
 # host: zoo1:2181
 ui:
-	open http://localhost:9000
+	open http://localhost:9002
 
 # psql
 psql:
@@ -165,3 +162,5 @@ redis-cli:
 pg_create_table:
 	docker compose exec pg psql -U postgres -c "CREATE TABLE videos (video_id VARCHAR(255) PRIMARY KEY, views_count BIGINT);"
 
+logs:
+	docker compose logs spark-notebook -f
