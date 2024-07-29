@@ -164,3 +164,6 @@ pg_create_table:
 
 logs:
 	docker compose logs spark-notebook -f
+
+redis:
+	docker compose exec redis redis-cli

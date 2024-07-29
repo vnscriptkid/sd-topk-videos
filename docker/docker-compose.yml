@@ -177,3 +177,8 @@ services:
     ports:
       - "8888:8888"
       - "4040:4040"
+
+  redis:
+    image: redis:6.2.0
+    ports:
+      - "6379:6379"
