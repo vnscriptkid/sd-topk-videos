@@ -25,3 +25,4 @@ function getTopK(k: Number, period: Period): Video[] {}
 ## Ref
 - https://youtu.be/1lfktgZ9Eeo?si=A-nCRmIAGfhLRSxK
 - https://youtu.be/nQpkRONzEQI?si=eXrZRQmN1M43hD3Q
+- https://youtu.be/kx-XDoPjoHw?si=eR6A9bIXyaSLQ-sJ
